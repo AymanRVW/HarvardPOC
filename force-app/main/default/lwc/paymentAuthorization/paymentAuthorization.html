@@ -1,0 +1,86 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 12-11-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+
+  <!-- <template>
+    <lightning-card title="Make A Payment" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Course Connection ID" required="true" name="courseConnectionId" value={cardDetails.courseConnectionId} onchange={handleInputChange}></lightning-input>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-input label="Amount" required="true" name="amount" value={cardDetails.amount} onchange={handleInputChange}></lightning-input>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-input label="Card Number" required="true" name="cardNumber" value={cardDetails.cardNumber} onchange={handleInputChange}></lightning-input>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-input label="Expiration Month" required="true" name="expirationMonth" value={cardDetails.expirationMonth} onchange={handleInputChange}></lightning-input>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-input label="Expiration Year" required="true" name="expirationYear" value={cardDetails.expirationYear} onchange={handleInputChange}></lightning-input>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-input label="CVV" required="true" name="cvv" value={cardDetails.cvv} onchange={handleInputChange}></lightning-input>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-input label="Email" required="true" name="email" value={cardDetails.email} onchange={handleInputChange}></lightning-input>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-input label="First Name" required="true" name="firstName" value={cardDetails.firstName} onchange={handleInputChange}></lightning-input>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-input label="Last Name" required="true" name="lastName" value={cardDetails.lastName} onchange={handleInputChange}></lightning-input>
+        </div>
+        <lightning-button variant="brand" label="Pay" title="Primary action with lighter look" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand-outline" label="Clear" title="Primary action with lighter look" onclick={handleCancel} class="slds-m-left_x-small"></lightning-button>
+
+    </lightning-card>
+
+</template> -->
+
+
+
+<template>
+  <lightning-card title="Make A Payment" icon-name="custom:custom14">
+    <div class="form-container">
+      <template if:true={isLoading}>
+        <div class="spinner-overlay">
+            <lightning-spinner alternative-text="Processing Payment"></lightning-spinner>
+        </div>
+      </template>
+      <div class="slds-m-around_medium">
+          <lightning-input label="Course Connection ID" required="true" name="courseConnectionId" value={cardDetails.courseConnectionId} onchange={handleInputChange}></lightning-input>
+      </div>
+      <div class="slds-m-around_medium">
+          <lightning-input label="Amount" required="true" name="amount" value={cardDetails.amount} onchange={handleInputChange}></lightning-input>
+      </div>
+      <div class="slds-m-around_medium">
+          <lightning-input label="Card Number" required="true" name="cardNumber" value={cardDetails.cardNumber} onchange={handleInputChange}></lightning-input>
+      </div>
+      <div class="slds-m-around_medium">
+          <lightning-input label="Expiration Month" required="true" name="expirationMonth" value={cardDetails.expirationMonth} onchange={handleInputChange}></lightning-input>
+      </div>
+      <div class="slds-m-around_medium">
+          <lightning-input label="Expiration Year" required="true" name="expirationYear" value={cardDetails.expirationYear} onchange={handleInputChange}></lightning-input>
+      </div>
+      <div class="slds-m-around_medium">
+          <lightning-input label="CVV" required="true" name="cvv" value={cardDetails.cvv} onchange={handleInputChange}></lightning-input>
+      </div>
+      <div class="slds-m-around_medium">
+          <lightning-input label="Email" required="true" name="email" value={cardDetails.email} onchange={handleInputChange}></lightning-input>
+      </div>
+      <div class="slds-m-around_medium">
+          <lightning-input label="First Name" required="true" name="firstName" value={cardDetails.firstName} onchange={handleInputChange}></lightning-input>
+      </div>
+      <div class="slds-m-around_medium">
+          <lightning-input label="Last Name" required="true" name="lastName" value={cardDetails.lastName} onchange={handleInputChange}></lightning-input>
+      </div>
+      <lightning-button variant="brand" label="Pay" title="Primary action with lighter look" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+      <lightning-button variant="brand-outline" label="Clear" title="Primary action with lighter look" onclick={clearForm} class="slds-m-left_x-small"></lightning-button>
+    </div>
+  </lightning-card>
+</template>
